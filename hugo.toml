@@ -1,0 +1,40 @@
+baseURL = "/"
+
+# One-page site, same as your other chess projects.
+disableKinds = ["section", "taxonomy", "term", "RSS", "robotsTXT"]
+
+defaultContentLanguage = "en"
+
+theme = "hugo-scroll"
+
+title = "Endgame Flashcards"
+
+enableGitInfo = true
+enableEmoji = true
+
+[params]
+    favicon = "images/favicon.png"
+    images = ["images/cover-image.jpg"]
+    title_guard = true
+    title = "Endgame Flashcards"
+    description = "Real endgame finishes pulled from Lichess games, as flip cards: try the position, then see how the game actually ended"
+    language_menu = false
+    show_current_lang = false
+    hidedesignbyline = false
+    invertSectionColors = false
+    image_options = "webp q90 lanczos photo"
+    combine_page_and_site_title = false
+
+    [params.footer]
+    showContactIcons = true
+    showFooterLinks = false
+
+[languages]
+  [languages.en]
+    weight = 10
+    languageName = "English"
+    contentDir = "content/en"
+
+# allow the flashcard markup (board containers) inside page content
+[markup.goldmark.renderer]
+  unsafe = true

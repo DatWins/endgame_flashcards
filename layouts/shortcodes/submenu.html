@@ -1,0 +1,17 @@
+{{- /*
+  Sub menu of categories for one section.
+  Usage: {{< submenu "Pawn races|pawn-races" "Pawn majorities|pawn-majorities" >}}
+  "Name|anchor" = clickable, jumps to that heading on the page
+  "Name"        = no anchor yet (shown faded)
+*/ -}}
+<nav class="submenu" aria-label="Categories in this group">
+{{- range .Params }}
+  {{- $parts := split . "|" }}
+  {{- $name := index $parts 0 }}
+  {{- if gt (len $parts) 1 }}
+  <a class="sub-item ready" href="#{{ index $parts 1 }}">{{ $name }}</a>
+  {{- else }}
+  <span class="sub-item soon" title="Coming soon">{{ $name }}</span>
+  {{- end }}
+{{- end }}
+</nav>

@@ -1,0 +1,11 @@
+{{- /*
+  One flip-card trainer for an endgame category. Picks a random real game
+  from static/data/<category>.json at load time (client-side).
+  Usage: {{< flashcard-deck category="pawn-races" title="Pawn races" >}}
+*/ -}}
+{{- $cat := .Get "category" -}}
+{{- $title := .Get "title" -}}
+{{- if not $cat }}{{ errorf "flashcard-deck: missing category= at %s" .Position }}{{ end -}}
+<div class="flashcard-deck" id="{{ $cat }}" data-category="{{ $cat }}" data-title="{{ $title | default $cat }}">
+  <noscript><p><em>This flashcard needs JavaScript enabled.</em></p></noscript>
+</div>
