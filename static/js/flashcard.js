@@ -7,9 +7,9 @@
 
   var SQ = 45, DIM = 8*SQ, MARGIN = 20, VB = DIM + MARGIN*2;
   var COLORS = {
-    light: "#f0d9b5", dark: "#b58863",
-    lightLast: "#cdd26a", darkLast: "#aaa23a",
-    margin: "#3b2416", coord: "#f0d9b5"
+    light: "#eeeed2", dark: "#769656",
+    lightLast: "#f7f769", darkLast: "#bbcb2b",
+    margin: "#1b3a1b", coord: "#eeeed2"
   };
   var FILES = "abcdefgh";
 
