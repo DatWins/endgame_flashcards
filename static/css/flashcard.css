@@ -1,13 +1,13 @@
 /* Endgame flashcard component. Green board (classic lichess-style green/
    cream squares), bold black text throughout. */
 .flashcard-deck {
-  --fc-panel: #fffdf8;
+  --fc-panel: #eeeed2;
   --fc-ink: #000;
   --fc-muted: #1a1a1a;
   --fc-accent: #2f6b3a;
   --fc-accent-ink: #fff;
   --fc-good: #1b5e24;
-  --fc-rule: #cfd9c6;
+  --fc-rule: #769656;
   max-width: 640px;
   margin: 1.2em auto 2.2em;
   font-family: inherit;
@@ -17,13 +17,13 @@
 .post-holder.dark .flashcard-deck {
   /* Keep the card panel light so bold black text stays readable even
      when the rest of the page is in dark mode. */
-  --fc-panel: #f1f6ef;
+  --fc-panel: #eeeed2;
   --fc-ink: #000;
   --fc-muted: #111;
   --fc-accent: #2f6b3a;
   --fc-accent-ink: #fff;
   --fc-good: #1b5e24;
-  --fc-rule: #a9bfa3;
+  --fc-rule: #769656;
 }
 .fc-empty {
   border: 1.5px dashed var(--fc-rule);
@@ -61,7 +61,7 @@
 .fc-status { min-height: 1.4em; text-align: center; font-size: 1.15rem; color: var(--fc-good); font-weight: 700; }
 .fc-controls { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; }
 .flashcard-deck button, .flashcard-deck a.fc-btn {
-  font-family: inherit; font-size: 1.05rem; font-weight: 700; padding: 10px 18px;
+  font-family: inherit; font-size: 1.35rem; font-weight: 700; padding: 13px 22px;
   border-radius: 8px; border: 2px solid var(--fc-accent); background: transparent;
   color: var(--fc-ink); cursor: pointer; text-decoration: none !important; display: inline-block;
 }
