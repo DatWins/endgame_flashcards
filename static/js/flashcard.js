@@ -159,7 +159,7 @@
     return (
       '<div class="fc-scene"><div class="fc-card" id="' + deckId + '-card">' +
         '<div class="fc-face" id="' + deckId + '-front">' +
-          '<div class="fc-tag-row"><span class="fc-tag" id="' + deckId + '-site"></span><span class="fc-turn-pill" id="' + deckId + '-turnpill"></span></div>' +
+          '<div class="fc-tag-row"><a class="fc-tag fc-site-link" id="' + deckId + '-site" target="_blank" rel="noopener"></a><span class="fc-turn-pill" id="' + deckId + '-turnpill"></span></div>' +
           '<div class="fc-board-wrap" id="' + deckId + '-frontboard"></div>' +
           '<div class="fc-status" id="' + deckId + '-status">&nbsp;</div>' +
           '<div class="fc-controls"><button id="' + deckId + '-reset">Reset position</button><button class="fc-primary" id="' + deckId + '-flip">Flip card →</button></div>' +
@@ -167,7 +167,7 @@
           '<p class="fc-caption">Click a piece, then a highlighted square, to try it here — or open it on Lichess to play against their engine.</p>' +
         '</div>' +
         '<div class="fc-face fc-back">' +
-          '<div class="fc-tag-row"><span class="fc-tag" id="' + deckId + '-site2"></span><span class="fc-tag" id="' + deckId + '-replayturn"></span></div>' +
+          '<div class="fc-tag-row"><a class="fc-tag fc-site-link" id="' + deckId + '-site2" target="_blank" rel="noopener"></a><span class="fc-tag" id="' + deckId + '-replayturn"></span></div>' +
           '<div class="fc-board-wrap" id="' + deckId + '-backboard"></div>' +
           '<div class="fc-movelist" id="' + deckId + '-movelist"></div>' +
           '<div class="fc-result-badge" id="' + deckId + '-result" hidden></div>' +
@@ -189,8 +189,17 @@
     var startColor = startParts[1] === "b" ? "Black" : "White";
     var startMoveNo = parseInt(startParts[5], 10) || 1;
 
-    document.getElementById(deckId + "-site").textContent = (entry.site || "").replace(/^https?:\/\//, "") + (entry.site ? " · move " + startMoveNo : "");
-    document.getElementById(deckId + "-site2").textContent = (entry.site || "").replace(/^https?:\/\//, "");
+    var siteLink = document.getElementById(deckId + "-site");
+    var siteLink2 = document.getElementById(deckId + "-site2");
+    siteLink.textContent = (entry.site || "").replace(/^https?:\/\//, "") + (entry.site ? " · move " + startMoveNo : "");
+    siteLink2.textContent = (entry.site || "").replace(/^https?:\/\//, "");
+    if (entry.site){
+      siteLink.href = entry.site;
+      siteLink2.href = entry.site;
+    } else {
+      siteLink.removeAttribute("href");
+      siteLink2.removeAttribute("href");
+    }
     document.getElementById(deckId + "-meta").textContent =
       (entry.event || "Rated game") + " · " + (entry.white || "White") + " (" + (entry.whiteElo || "?") + ") vs " + (entry.black || "Black") + " (" + (entry.blackElo || "?") + ")";
 

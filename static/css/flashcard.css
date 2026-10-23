@@ -55,6 +55,9 @@
 .fc-face.fc-back { transform: rotateY(180deg); }
 .fc-tag-row { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
 .fc-tag { font-size: .9rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--fc-ink); }
+.fc-site-link { text-decoration: underline; text-decoration-color: var(--fc-accent); text-underline-offset: 3px; cursor: pointer; }
+.fc-site-link:hover, .fc-site-link:focus-visible { color: var(--fc-accent); }
+.fc-site-link:empty { text-decoration: none; cursor: default; }
 .fc-turn-pill { font-size: 1rem; font-weight: 700; padding: 5px 14px; border-radius: 999px; background: var(--fc-accent); color: var(--fc-accent-ink); }
 .fc-board-wrap { display: flex; justify-content: center; position: relative; }
 .fc-board-svg { width: min(100%, 560px); height: auto; display: block; user-select: none; }
