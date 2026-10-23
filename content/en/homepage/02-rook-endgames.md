@@ -5,7 +5,7 @@ navigation_menu_title: "Rook Endgames"
 weight: 2
 header_menu: true
 ---
-{{< submenu "Rook endings|rook-endings" "Rook + pawn vs Rook|rook-and-pawn-vs-rook" "Lucena position|lucena-position" "Philidor position|philidor-position" "Rook + a/h pawn vs Rook|rook-pawn-vs-rook" "Rook vs pawn|rook-vs-pawn" "Rook vs minor piece|rook-vs-minor-piece" >}}
+{{< submenu "Rook endings|rook-endings" "Rook + pawn vs Rook|rook-and-pawn-vs-rook" "Lucena position|lucena-position" "Philidor position|philidor-position" "Rook + a/h pawn vs Rook|rook-pawn-vs-rook" "Rook vs pawn|rook-vs-pawn" "Rook vs minor piece|rook-vs-minor-piece" "Rook+pawns vs minor+pawns|rook-vs-minor-piece-with-pawns" "Rook+pawns vs B+N+pawns|rook-vs-bishop-and-knight" >}}
 
 ## Rook endings
 {{< flashcard-deck category="rook-endings" title="Rook endings" >}}
@@ -27,3 +27,9 @@ header_menu: true
 
 ## Rook vs minor piece
 {{< flashcard-deck category="rook-vs-minor-piece" title="Rook vs minor piece" >}}
+
+## Rook + pawns vs minor piece + pawns
+{{< flashcard-deck category="rook-vs-minor-piece-with-pawns" title="Rook + pawns vs minor piece + pawns" >}}
+
+## Rook + pawns vs Bishop + Knight + pawns
+{{< flashcard-deck category="rook-vs-bishop-and-knight" title="Rook + pawns vs Bishop + Knight + pawns" >}}
